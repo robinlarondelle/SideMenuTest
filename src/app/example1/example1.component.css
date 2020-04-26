@@ -1,0 +1,21 @@
+.wrapper {
+  color: red !important;
+  display: flex !important;
+  align-items: stretch; /* This property makes sure all the child elements have the same height */
+}
+
+.sidebar {
+  min-width: 250px;
+  max-width: 250px;
+}
+
+/* Sidebar with the active class attached to it */
+/* on desktop, the active class will be applied when the sidebar is hidden */
+/* On mobile, the opposite is true, the active class will be applied when the sidebar is visible */
+.sidebar.active { 
+  margin-left: -250px; /* collapse navbar when 'active' */
+}
+
+/* The width of this property will be the remaining width of the wrapper */
+#content {
+}

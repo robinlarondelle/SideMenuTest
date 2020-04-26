@@ -1,3 +1,88 @@
-<p>
-  example1 works!
-</p>
+<!-- Create a wrapper to make advantage of the CSS Flex property -->
+<div class="wrapper">
+
+  <!-- Sidebar -->
+  <nav class="sidebar mnh-100vh">
+
+    <div class="sidebar-header">
+      <h3>Bootstrap Header</h3>
+    </div>
+
+    <ul class="list-unstyled components">
+      <p>Dummy Heading</p>
+      <li class="active">
+
+        <!-- The data-toggle="collapse" makes the dropdown work -->
+        <!-- Class dropdown-toggle adds a small triangle on the side to make it clear its a dropdown -->
+        <!-- The href references to the object to be collapsed -->
+        <!-- Aria Expanded makes sure the dropdown is collapsed when the page first loads -->
+        <a href="#homeSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+
+        <!-- Item 1 in the list, with multiple subitems that can be expanded -->
+        <!-- The dropdown menu should have a collapse class -->
+        <ul class="collapse list-unstyled" id="homeSubMenu">
+          <li>
+            <a href="#">Home 1</a>
+          </li>
+          <li>
+            <a href="#">Home 2</a>
+          </li>
+          <li>
+            <a href="#">Home 3</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Item 2 in the list -->
+      <li>
+        <a href="#">About</a>
+      </li>
+
+      <!-- Item 3 in the list -->
+      <li>
+        <a href="pageSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+        <ul class="collapse list-unstyled" id="pageSubMenu">
+          <li>
+            <a href="#">Page 1</a>
+          </li>
+          <li>
+            <a href="#">Page 2</a>
+          </li>
+          <li>
+            <a href="#">Page 3</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Item 4 in the list -->
+      <li>
+        <a href="#">Portfolio</a>
+      </li>
+
+      <!-- Item 5 in the list -->
+      <li>
+        <a href="#">Contact</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- Main page content -->
+  <div class="content">
+
+    <!-- The button to toggle the sidebar is placed in a navbar -->
+    <!-- It it important that the button to toggle the sidebar should always be visible on the page -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+
+        <!-- Button to toggle sidebar -->
+        <button class="btn btn-info" id="sidebarCollapse">
+          <i class="fas fa-align-left"></i>
+          <span>Toggle Sidebar</span>
+        </button>
+
+      </div>
+    </nav>
+    
+  </div>
+</div>

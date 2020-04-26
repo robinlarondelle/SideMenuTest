@@ -1,0 +1,93 @@
+/*
+
+SIZES
+Default heights, widths and font-sizes which you'll want to use across different html pages
+Place your size classes here if you need to use them more than once.
+
+*/
+
+/*screen sizes*/
+/* Height */
+.h-25vh { height: 25vh !important; }
+.h-33vh { height: 33vh !important; }
+.h-50vh { height: 50vh !important; }
+.h-66vh { height: 66vh !important; }
+.h-75vh { height: 75vh !important; }
+.h-100vh { height: 100vh !important; }
+
+/* Min height */
+.mnh-25vh { min-height: 25vh !important; }
+.mnh-33vh { min-height: 33vh !important; }
+.mnh-50vh { min-height: 50vh !important; }
+.mnh-66vh { min-height: 66vh !important; }
+.mnh-75vh { min-height: 75vh !important; }
+.mnh-100vh { min-height: 100vh !important; }
+
+/* Max height */
+.mxh-25vh { max-height: 25vh !important; }
+.mxh-33vh { max-height: 33vh !important; }
+.mxh-50vh { max-height: 50vh !important; }
+.mxh-66vh { max-height: 66vh !important; }
+.mxh-75vh { max-height: 75vh !important; }
+.mxh-100vh { max-height: 100vh !important; }
+
+/* Width */
+.w-25vw { width: 25vw !important; }
+.w-33vw { width: 33vw !important; }
+.w-50vw { width: 50vw !important; }
+.w-66vw { width: 66vw !important; }
+.w-75vw { width: 75vw !important; }
+.w-100vw { width: 100vw !important; }
+
+/* Min width */
+.mnw-25vw { min-width: 25vw !important; }
+.mnw-33vw { min-width: 33vw !important; }
+.mnw-50vw { min-width: 50vw !important; }
+.mnw-66vw { min-width: 66vw !important; }
+.mnw-75vw { min-width: 75vw !important; }
+.mnw-100vw { min-width: 100vw !important; }
+
+/* Max width */
+.mxw-25vw { max-width: 25vw !important; }
+.mxw-33vw { max-width: 33vw !important; }
+.mxw-50vw { max-width: 50vw !important; }
+.mxw-66vw { max-width: 66vw !important; }
+.mxw-75vw { max-width: 75vw !important; }
+.mxw-100vw { max-width: 100vw !important; }
+
+/* Header */
+.header-compensation { margin-top: -75px !important; }
+.header-padding { padding-top: 75px !important; }
+
+/* 30px padding for the footer */
+.footer-spacer {
+  padding-bottom: 360px !important;
+}
+
+@media screen and (min-width: 405px) {
+  .footer {
+    height: 296px !important;
+  }
+
+  .footer-spacer {
+    padding-bottom: 336px !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 128px !important;
+  }
+
+  .footer-spacer {
+    padding-bottom: 158px !important;
+  }
+}
+
+/* Footer classes */
+.footer {
+  background: linear-gradient(90deg, rgba(94,252,232,1) -100%, rgba(115,110,254,1) 100%);
+  height: 330px !important;
+  bottom: 0;
+  width: 100% !important;
+}
