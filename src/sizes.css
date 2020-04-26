@@ -55,39 +55,4 @@ Place your size classes here if you need to use them more than once.
 .mxw-75vw { max-width: 75vw !important; }
 .mxw-100vw { max-width: 100vw !important; }
 
-/* Header */
-.header-compensation { margin-top: -75px !important; }
-.header-padding { padding-top: 75px !important; }
 
-/* 30px padding for the footer */
-.footer-spacer {
-  padding-bottom: 360px !important;
-}
-
-@media screen and (min-width: 405px) {
-  .footer {
-    height: 296px !important;
-  }
-
-  .footer-spacer {
-    padding-bottom: 336px !important;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .footer {
-    height: 128px !important;
-  }
-
-  .footer-spacer {
-    padding-bottom: 158px !important;
-  }
-}
-
-/* Footer classes */
-.footer {
-  background: linear-gradient(90deg, rgba(94,252,232,1) -100%, rgba(115,110,254,1) 100%);
-  height: 330px !important;
-  bottom: 0;
-  width: 100% !important;
-}
