@@ -6,18 +6,6 @@ body {
   background: #fdfffc;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-router-outlet + * {
-  position: absolute;
-  display: block;
-  height: 100vh;
-  width: 100vw;
-}
-
 p {
   font-family: 'Poppins', sans-serif;
   font-size: 1.1em;

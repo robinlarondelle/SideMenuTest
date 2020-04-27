@@ -1,0 +1,214 @@
+/* Color palette */
+/* https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51 */
+
+/* General style */
+a, a:hover, a:focus {
+  color: inherit; /* Inherit the color to prevent blue link color */
+  text-decoration: none; /* Clear all text decoration */
+  transition: all 0.3s; /* how long should the color change on hover or focus*/
+}
+
+.navbar {
+  padding: 15px 10px;
+  background: #fff; /* White background color in the navbar */
+  border: none; /* No border */
+  border-radius: 0%;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* slight shadow under the header */
+}
+
+.line {
+  border: 1px dashed lightgrey;
+  margin: 50px 0px;
+}
+
+i, span {
+  display: inline-block;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+/* Sidebar specific styles */
+.wrapper { /* These properties could probably also be done using bootstrap only */
+  display: flex; /* All undefined width elements will fill the screens width */
+  align-items: stretch; /* This property will make all the elements fill the entire screen */
+}
+
+.sidebar {
+  min-width: 250px;
+  max-width: 250px; /* Size of the sidebar when expanded */
+  background: #264653;
+  color: #fff; /* White text */
+  transition: all 0.3s; /* Performance update: don't use 'all', it's bad for performance */
+
+  /* 
+  Transition is shorthand for all the separate transition properties. an alternative would be
+
+  transition-property: property; 
+  transition-duration: duration; 
+  transition-timing-function: timing-function; 
+  transition-delay: delay 
+
+  transition on its own is:
+  transition: property duration timing-function delay;
+  */
+}
+
+.sidebar.active {
+  min-width: 80px;
+  max-width: 80px; /* dont completely hide the sidebar when closed to leave space for the symbols */
+  text-align: center; /* because the font awesome icons are considered text, the text-align property will work */
+}
+
+.sidebar .sidebar-header {
+  padding: 20px;
+  background: #2a9d8f;
+}
+
+/* Hide strong part of sidebar header when expanded */
+.sidebar .sidebar-header strong {
+  display: none;
+  font-size: 1.8rem;
+}
+
+.sidebar.active .sidebar-header h3 {
+  display: none; /* hide the header and h3 elements when active */
+}
+
+.sidebar.active .sidebar-header strong {
+  display: block; /* Display the strong part when active */
+}
+
+.sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #2a9d8f;
+}
+
+/* Style for the a element text */
+.sidebar ul li a {
+  text-align: left;
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+.sidebar ul li a:hover, /*When hovering on a link in the sidebar */
+.sidebar ul li.active>a, /*When a link in the sidebar is active */
+a[aria-expanded="true"]  { /* When a group of items is expanded */
+  color: #264653; /* color of the background */
+  background: #fff; /* white background on hover */
+}
+
+/* Style for the font awesome icons */
+.sidebar ul li a i {
+  margin-right: 10px;
+}
+
+/* Style for the a element text when active */
+.sidebar.active ul li a {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.85rem; /* root em: font size of the html element */
+}
+
+/* Style for the font awesome icons */
+.sidebar.active ul li a i { 
+  display: block;
+  font-size: 1.8rem;
+  margin-right: 0px;
+  margin-bottom: 5px;
+}
+
+/* Style for the elements in a collapsed group */
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #2a9d8f;
+}
+
+/* Style for the child links when expanded and active */
+.sidebar.active ul ul a {
+  padding: 10px !important;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.sidebar.active .dropdown-toggle::after {
+  top: auto;
+  bottom: 10px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+/* Content style */
+.content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+/* Media Queries */
+/* Breakpoint lg > md */
+@media (max-width: 768px) {
+  .sidebar {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .dropdown-toggle::after {
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+
+  .sidebar.active {
+    margin-left: 0 !important;
+  }
+
+  /* Hide the Long title and show the strong part */
+  .sidebar .sidebar-header h3 {
+    display: none;
+  }
+
+  .sidebar .sidebar-header strong {
+    display: block;
+  }
+
+  .sidebar ul li a {
+    padding: 20px 10px;
+  }
+
+  .sidebar ul li a span{
+    font-size: 0.85rem;
+  }
+
+  .sidebar ul li a i {
+    margin-right: 0;
+    display: block;
+    font-size: 1.3em;
+  }
+
+  .sidebar ul ul a {
+    padding: 10px !important;
+  }
+
+  #sidebarCollapse span {
+    display: none;
+  }
+}

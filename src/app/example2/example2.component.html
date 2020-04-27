@@ -1,3 +1,159 @@
-<p>
-  example2 works!
-</p>
+<!-- Create a wrapper to make advantage of the CSS Flex property -->
+<div class="wrapper w-100vw">
+
+  <!-- Sidebar -->
+  <!-- We use the Angular [class.[name]] attribute to add the active class when the button is pressed -->
+  <nav class="sidebar mnh-100vh" [class.active]="toggled">
+
+    <div class="sidebar-header p-4">
+      <h3>Sidebar 2</h3>
+    </div>
+
+    <ul class="list-unstyled components">
+      <p class="p-1">Your personal Sidebar</p>
+      <li class="active">
+
+        <!-- The data-toggle="collapse" makes the dropdown work -->
+        <!-- Class dropdown-toggle adds a small triangle on the side to make it clear its a dropdown -->
+        <!-- The href references to the object to be collapsed -->
+        <!-- Aria Expanded makes sure the dropdown is collapsed when the page first loads -->
+        <a href="#homeSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+
+        <!-- Item 1 in the list, with multiple subitems that can be expanded -->
+        <!-- The dropdown menu should have a collapse class -->
+        <ul class="collapse list-unstyled" id="homeSubMenu">
+          <li>
+            <a href="#">Home 1</a>
+          </li>
+          <li>
+            <a href="#">Home 2</a>
+          </li>
+          <li>
+            <a href="#">Home 3</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Item 2 in the list -->
+      <li>
+        <a href="#">About</a>
+      </li>
+
+      <!-- Item 3 in the list -->
+      <li>
+        <a href="#pageSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+        <ul class="collapse list-unstyled" id="pageSubMenu">
+          <li>
+            <a href="#">Page 1</a>
+          </li>
+          <li>
+            <a href="#">Page 2</a>
+          </li>
+          <li>
+            <a href="#">Page 3</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Item 4 in the list -->
+      <li>
+        <a href="#">Portfolio</a>
+      </li>
+
+      <!-- Item 5 in the list -->
+      <li>
+        <a href="#">Contact</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- Main page content -->
+  <div class="content p-3">
+
+    <!-- The button to toggle the sidebar is placed in a navbar -->
+    <!-- It it important that the button to toggle the sidebar should always be visible on the page -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+
+        <!-- Button to toggle sidebar -->
+        <button type="button" class="btn btn-info" id="sidebarCollapse" (click)="toggleSidebar()">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a routerLink="/home" class="btn btn-info w">
+          <span><i class="fas fa-home"></i>&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></span>
+        </a>
+
+      </div>
+    </nav>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h2>Simple collapsable sidebar using Bootstrap and Angular</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h4>Scrolls with the page</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="row">
+        <div class="col">
+          <h2>Lorem Ipsum Dolor</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="row">
+        <div class="col">
+          <h2>Lorem Ipsum Dolor</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="row">
+        <div class="col">
+          <h3>Lorem Ipsum Dolor</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>

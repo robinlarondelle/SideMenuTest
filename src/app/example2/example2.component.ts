@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./example2.component.css']
 })
 export class Example2Component implements OnInit {
+  toggled: boolean = false
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleSidebar = () => this.toggled = !this.toggled
 }

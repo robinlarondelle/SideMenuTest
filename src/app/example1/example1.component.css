@@ -61,6 +61,11 @@ ul ul a {
   border-color: #3a506b !important;
 }
 
+.line {
+  border: 1px dashed lightgrey;
+  margin: 50px 0px;
+}
+
 /* Sidebar with the active class attached to it */
 /* on desktop, the active class will be applied when the sidebar is hidden */
 /* On mobile, the opposite is true, the active class will be applied when the sidebar is visible */
