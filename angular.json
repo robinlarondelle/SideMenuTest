@@ -24,7 +24,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/sizes.css"
+              "src/sizes.css",
+              "src/colors.css"
             ],
             "scripts": []
           },

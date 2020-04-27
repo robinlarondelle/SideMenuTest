@@ -86,7 +86,6 @@ a, a:hover, a:focus {
   background-color: #fdfffc;
   width: 100%;
 }
-
 /* On mobile devices and screens < 768px, the sidebar will be hided by default */
 @media (max-width: 768px) {
   #sidebar {

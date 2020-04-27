@@ -1,0 +1,15 @@
+/*
+
+COLORS
+Default colors which you'll want to use across different html pages
+Place your color classes here if you need to use them more than once.
+
+*/
+
+.w { color: white !important; }
+.b { color: black !important; }
+.r { color: red !important; }
+.gr { color: grey !important; }
+
+.color-gradient-light { color: #5EFCE8;}
+.color-gradient-dark { color: #736EFE;}
