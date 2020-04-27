@@ -49,7 +49,7 @@
   </nav>
 
   <!-- Content -->
-  <div class="content">
+  <div class="content" [class.active]="toggled">
 
     <!-- Custom nav to access the sidebar toggle buttons -->
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -59,11 +59,9 @@
           <i class="fas fa-bars"></i>
         </button>
 
-        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" 
-          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle Navigation">
-          <i class="fas fa-align-justify"></i>
-        </button>
+        <a routerLink="/home" class="btn btn-info w">
+          <span><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;<i class="fas fa-home"></i></span>
+        </a>
 
       </div>
     </nav>
