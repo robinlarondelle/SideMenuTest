@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: "1", component: Example1Component, data: {animation: 'isLeft'} },
   { path: "2", component: Example2Component/*, data: {animation: 'isRight'}  */},
   { path: "3", component: Example3Component/*, data: {animation: 'isTop'}  */},
-  { path: "4", component: Example4Component, data: {animation: 'isRight'}  },
+  { path: "4", component: Example4Component, data: {animation: 'isLeft'}  },
 ];
 
 @NgModule({
