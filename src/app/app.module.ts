@@ -9,6 +9,7 @@ import { Example2Component } from './example2/example2.component';
 import { Example3Component } from './example3/example3.component';
 import { Example4Component } from './example4/example4.component';
 import { Example5Component } from './example5/example5.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { Example5Component } from './example5/example5.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule, // <-- animations
     AppRoutingModule
   ],
   providers: [],

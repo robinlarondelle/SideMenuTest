@@ -8,11 +8,11 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "home", component: HomeComponent },
-  { path: "1", component: Example1Component },
-  { path: "2", component: Example2Component },
-  { path: "3", component: Example3Component },
-  { path: "4", component: Example4Component },
+  { path: "home", component: HomeComponent, data: {animation: 'HomeComponent'} },
+  { path: "1", component: Example1Component, data: {animation: 'isLeft'}  },
+  { path: "2", component: Example2Component, data: {animation: 'isRight'}  },
+  { path: "3", component: Example3Component, data: {animation: 'isTop'}  },
+  { path: "4", component: Example4Component, data: {animation: 'isBottom'}  },
 ];
 
 @NgModule({
