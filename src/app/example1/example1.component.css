@@ -1,3 +1,4 @@
+/* Color palette: https://coolors.co/0b132b-1c2541-3a506b-5bc0be-6fffe9 */
 .wrapper {
   display: flex;
   align-items: stretch; /* This property makes sure all the child elements have the same height */
@@ -50,9 +51,14 @@ ul ul a {
   background: #1c2541;
 }
 
-#sidebar ul li.active > a, a[aria-expanded="true"] {
+.sidebar ul li.active > a, a[aria-expanded="true"] {
   color: #fff;
   background: #1c2541;
+}
+
+.btn {
+  background-color: #1c2541 !important;
+  border-color: #3a506b !important;
 }
 
 /* Sidebar with the active class attached to it */
@@ -88,10 +94,10 @@ a, a:hover, a:focus {
 }
 /* On mobile devices and screens < 768px, the sidebar will be hided by default */
 @media (max-width: 768px) {
-  #sidebar {
+  .sidebar {
       margin-left: -250px;
   }
-  #sidebar.active {
+  .sidebar.active {
       margin-left: 0;
   }
 }
